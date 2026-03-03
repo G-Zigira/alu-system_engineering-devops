@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# This file installs Nginx with the required configurations
+
+apt-get update -y
+apt-get install nginx -y 
+sudo ufw allow 'Nginx HTTP'
+sh -c 'echo "Holberton School" > /var/www/html/index.html'
+service nginx restart
